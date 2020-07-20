@@ -67,6 +67,12 @@ p#poem {
 
 .output {
   height: 274px;
+  width: 100%;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  background-color: darkslategray;
+  overflow: scroll;
 }
 
 p#desc {
@@ -77,12 +83,6 @@ p#desc {
 }
 
 iframe {
-  width: 100%;
-  height: 100%;
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
-  background-color: darkslategray;
 }
 
 rect {
