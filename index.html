@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Game</title>
+    <script>
+      main.js;
+    </script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
+    <div class="header">this is header</div>
+    <div class="row">
+      <section class="colum" id="left">
+        <div id="title">
+            <h3><strong>菜鸟飞天传</strong></h3>
+            <p id="poem">寻仙问道觅无踪，芒鞋踏破万千重。<br>
+        匍匐草木身为草，登顶峰峦我是峰。</p>
+        </div>
+        <div id="current_status">
+            <p>当前境界：菜鸟 【0/50】<br>
+            当前状态：闲逛中<br>    
+            </p>
+        </div>
+        <div id="idle">
+            <p class="idle_quest">挂机设置：</p>
+            <p>这里设置全自动挂机这里设置全自动挂机 这里设置全自动挂机这里设置全自动挂机这里设置全自动挂机这里设置全自动挂机这里设置全自动挂机这里设置全自动挂机这里设置全自动挂机</p>
+        </div>
+        <div id="quest">
+            <p class="idle_quest">任务：</p>
+            <p>这里是当前任务列表</p>
+            <p>这里是当前任务列表</p>
+            <p>这里是当前任务列表</p>
+            <p>这里是当前任务列表</p>
+        </div>
+      </section>
+      <section class="colum" id="center">
+        <div class="room">
+          <div id="room_name"><b>茅草屋</b></div>
+          <div id="room_desc">
+            <p id="desc">
+              这里是茅草屋这里是茅草屋这里是茅草屋这里是茅草屋这里是茅草屋这里是茅草屋这里是茅草屋这里是茅草屋这里是茅草屋这里是茅草屋这里是茅草屋这里是茅草屋这里是茅草屋这里是茅草屋这里是茅草屋这里是茅草屋。
+            </p>
+          </div>
+          <div class="room_exits">
+            <svg width="430" height="102" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <rect id="current" y="40.64999" x="250" />
+                <text
+                  y="55.8"
+                  x="199.5"
+                  id="current_room"
+                  xml:space="preserve"
+                  font-size="12"
+                  font-family="Helvetica, Arial, sans-serif"
+                  text-anchor=""
+                >
+                  茅草屋
+                </text>
+                <rect id="north" x="250" y="1.75" />
+                <text
+                  id="north_room"
+                  x="197.5"
+                  y="17.64999"
+                  font-size="12"
+                  font-family="Helvetica, Arial, sans-serif"
+                  text-anchor="start"
+                  xml:space="preserve"
+                >
+                  房间北
+                </text>
+                <line
+                  id="north_line"
+                  x1="278.5"
+                  y1="23.64999"
+                  x2="278.5"
+                  y2="39.64999"
+                />
+                <rect id="west" y="40.5" x="148.5" />
+                <text
+                  id="west_room"
+                  x="97.5"
+                  y="54.64999"
+                  font-size="12"
+                  font-family="Helvetica, Arial, sans-serif"
+                  text-anchor="start"
+                  xml:space="preserve"
+                >
+                  房间西
+                </text>
+                <line
+                  id="west_line"
+                  x1="208.5"
+                  y1="50.64999"
+                  x2="250.5"
+                  y2="50.64999"
+                />
+                <rect id="east" y="39.5" x="343.5" />
+                <text
+                  id="east_room"
+                  x="290.5"
+                  y="53.34959"
+                  font-size="12"
+                  font-family="Helvetica, Arial, sans-serif"
+                  text-anchor="start"
+                  xml:space="preserve"
+                  transform="matrix(1, 0, 0, 0.9375, 0, 3.24062)"
+                >
+                  房间东
+                </text>
+                <line
+                  id="east_line"
+                  x1="310.5"
+                  y1="49.64999"
+                  x2="344.5"
+                  y2="49.64999"
+                />
+                <rect id="south" y="80.25" x="250" />
+                <text
+                  id="south_room"
+                  x="199.5"
+                  y="93.8"
+                  font-size="12"
+                  font-family="Helvetica, Arial, sans-serif"
+                  text-anchor="start"
+                  xml:space="preserve"
+                >
+                  房间南
+                </text>
+                <line
+                  id="south_line"
+                  x1="278.5"
+                  y1="61.64999"
+                  x2="278.5"
+                  y2="80.64999"
+                />
+                <rect id="northwest" y="1.75" x="148.5" />
+                <text
+                  id="northwest_room"
+                  x="98.5"
+                  y="17.64999"
+                  font-size="12"
+                  font-family="Helvetica, Arial, sans-serif"
+                  text-anchor="start"
+                  xml:space="preserve"
+                >
+                  西北房
+                </text>
+                <line
+                  id="northwest_line"
+                  x1="208.5"
+                  y1="21.64999"
+                  x2="251.5"
+                  y2="41.64999"
+                />
+                <rect id="southwest" y="80.25" x="148.5" />
+                <text
+                  id="southwest_room"
+                  x="96.5"
+                  y="95.80001"
+                  font-size="12"
+                  font-family="Helvetica, Arial, sans-serif"
+                  text-anchor="start"
+                  xml:space="preserve"
+                >
+                  西南房
+                </text>
+                <line
+                  id="southwest_line"
+                  x1="250.5"
+                  y1="59.64999"
+                  x2="208.5"
+                  y2="79.64999"
+                />
+                <rect id="northeast" y="1.75" x="343.5" />
+                <text
+                  id="northeast_room"
+                  x="291.5"
+                  y="17.64999"
+                  font-size="12"
+                  font-family="Helvetica, Arial, sans-serif"
+                  text-anchor="start"
+                  xml:space="preserve"
+                >
+                  东北房
+                </text>
+                <line
+                  id="northeast_line"
+                  x1="344.5"
+                  y1="20.64999"
+                  x2="309.5"
+                  y2="39.64999"
+                />
+                <rect id="southeast" y="80.25" x="343.5" />
+                <text
+                  id="southeast_room"
+                  x="291.5"
+                  y="92.64999"
+                  font-size="12"
+                  font-family="Helvetica, Arial, sans-serif"
+                  text-anchor="start"
+                  xml:space="preserve"
+                >
+                  东南房
+                </text>
+
+                <line
+                  id="southeast_line"
+                  x1="309.5"
+                  y1="60.64999"
+                  x2="344.5"
+                  y2="79.64999"
+                />
+              </g>
+            </svg>
+          </div>
+          <div id="room_item"><b>这里有：</b></div>
+          <table id="room_object">
+            <tr>
+              <td class="npc">
+                <button>隔壁老王</button>
+              </td>
+              <td class="npc">
+                <button>韩   立</button>
+              </td>
+            
+              <td class="npc">
+                <button>墨 大 师</button>
+              </td>
+              <td class="npc">
+                  <button>铁牛张三</button></td>
+              <td class="item">
+                <button>道 德 经</button>
+              </td>
+            
+              <td class="item">
+                <button>香   茶</button>
+              </td>
+              <td class="item">
+                <button>铁 护 腕</button>
+              </td>
+              <td class="item">
+                <button>绿色小帽</button>
+              </td>
+            </tr>
+            
+          </table>
+          <div>
+            <b>你可以：</b>
+            <table>
+              <tr>
+                <td class="room_action">
+                  <button>查   看</button>
+                </td>
+                <td class="action_button">
+                  <button>全部拾起</button>
+                </td>
+                <td class="action_button">
+                  <button>跳   跃</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="output">
+          <iframe></iframe>
+        </div>
+      <div>
+        <table>
+          <tr>
+            <td>
+              <button>技  能</button>
+              <button>技  能</button>
+              <button>技  能</button>
+              <button>技  能</button>
+              <button>技  能</button>
+              <button>技  能</button>
+              <button>技  能</button>
+              <button>技  能</button>
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td id="hp_bar">
+              <lable for="hp">生 命:</lable>
+              <progress id="hp" value="50" max="100"></progress>
+            </td>
+            <td id="mp_bar">
+              <lable for="mp">灵 力:</lable>
+              <progress id="mp" value="75" max="100"></progress>
+            </td>
+          </tr>
+        </table>
+      </div>
+      </section>
+      <section class="colum" id="right">
+        <div class="topnav">
+          <a href="">地图</a>
+          <a href="">属性</a>
+          <a href="">装备</a>
+          <a href="">技能</a>
+          <a href="">纳戒</a>
+          <a href="">随从</a>
+          <a href="">洞府</a>
+          <a href="">成就</a>
+          <a href="">设置</a>
+        </div>
+        <div>
+          <img src="test.svg" alt="test map">
+        </div>
+        
+        </div>
+      </section>
+    </div>
+    <div class="footer">this is footer</div>
+  </body>
+</html>
